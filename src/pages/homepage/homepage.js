@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Directory from '../../compnents/directory/directory'
+import Directory from '../../components/directory/directory'
 
 
 import './homepage.scss';
