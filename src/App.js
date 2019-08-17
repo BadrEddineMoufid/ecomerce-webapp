@@ -1,6 +1,6 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
-import {auth, createUserProfileDoc} from './firebase/firebase';
+import {auth, createUserProfileDoc} from './components/firebase/firebase';
 
 import './App.css';
 
@@ -43,11 +43,11 @@ class App extends React.Component {
         })
       }
       else{
-        this.setState({currentUser: userAuth});
+        this.setState({currentUser: userAuth}, ()=> console.log(this.state));
         //console.log(this.state);
       }
       
-      
+      //console.log(this.state);
       //createUserProfileDoc(user);
       //this.setState({currentUser: user});
       //console.log(user);
