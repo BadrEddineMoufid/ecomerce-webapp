@@ -19,7 +19,7 @@ const Header = ({currentUser, hidden}) => (
         </Link>
 
         <div className='options'>
-
+            {/* link component to go to diffrent pages what they call navigation..... */}
             <Link className='option' to='/shop'>
                 SHOP
             </Link>
@@ -38,11 +38,19 @@ const Header = ({currentUser, hidden}) => (
             
         </div>
         {
+            //if hidden is true then we render nothing otherwise if hidden is flase wich means that the user clicked
+            //on the fucking cart icon then we show the fucking cart-drop-down thing fuck this hard ...
             hidden ? null : <CartDropDown />
         }
     </div>  
 );
 
+
+//some redux shit that i still need to fully undertstand meanwhile 
+//redux is a bitch but it's a good system architecture to manage app state i guess and it's industry standard now hhhh
+// this just passing the sate as a property so i can use it to 
+// determin if the app need to render the drop down thing holly shit .....
+//some destructering that i found in course 'user: {currentUser}, cart: {hidden}'
 const mapStateToProps = ({user: {currentUser}, cart : {hidden}}) => ({
     currentUser,
     hidden
